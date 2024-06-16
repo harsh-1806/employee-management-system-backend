@@ -2,10 +2,10 @@
 FROM openjdk:17-jdk-slim
 
 # Set the working directory inside the container
-WORKDIR /app
+WORKDIR /
 
 # Copy the jar file into the container
-COPY target/employee-system-backend-0.0.1-SNAPSHOT.jar /app/employee-system-backend.jar
+COPY target/employee-system-backend-0.0.1-SNAPSHOT.jar /employee-system-backend.jar
 
 # Expose the port your application runs on
 EXPOSE 8080
