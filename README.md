@@ -54,12 +54,12 @@ The Employee Management System (EMS) backend is a RESTful API developed using Sp
 
 3. **Configure Application Properties**
 
-   Update `src/main/resources/application.properties` with your database credentials:
+   Update `src/main/resources/application.yml` with your database credentials:
 
-   ```properties
-   spring.datasource.url=jdbc:postgresql://localhost:5432/employee_management
-   spring.datasource.username=your_db_username
-   spring.datasource.password=your_db_password
+   ```yaml
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:employee_db}
+    username: ${POSTGRES_USER:root}
+    password: ${POSTGRES_PASSWORD:password}
    ```
 
 4. **Build the Application**
